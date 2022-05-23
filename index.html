@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>SuperPass</title>
+    <link rel="icon" href="./icon.png">
 </head>
 <body>
     <canvas id='Matrix'></canvas>
     <script src="./matrix.js"></script>
+    <script src="./script.js"></script>
     <div id="app">
         <div id="wrapper">
           <h1 class="glitch" data-text="SuperPass">SuperPass</h1>
@@ -17,10 +19,10 @@
         </div>
     </div>
     <div id="main">
-        <div id="head1">Your Strong Password just one click away : </div>
-        <input readonly id="display" value="k.jdfv">
+        <div id="head1">Your Strong Password is just one click away : </div>
+        <input readonly id="display" value="">
         <div class="startContainer">
-            <button class="button pulseBox">Generate</button>
+            <button class="button pulseBox" onclick="generate()">Generate</button>
         </div>
     </div>
     <div id="about">
@@ -31,7 +33,9 @@
             <li>At least one special character</li>
             <li>At least one uppercase letter</li>
             <li>At least one lowercase letter</li>
+            <li>Unpredictability (So that it cannot be guessed)</li>
         </ul>
     </div>
+    <div id="snackbar">Password Copied to Clipboard!</div>
 </body>
 </html>
